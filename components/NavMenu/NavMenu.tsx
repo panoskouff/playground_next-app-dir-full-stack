@@ -24,7 +24,7 @@ export const NavMenu = () => (
       </li>
 
       <li>
-        <AuthCheck>
+        <AuthCheck fallback={null}>
           <SignOutButton />
         </AuthCheck>
       </li>
