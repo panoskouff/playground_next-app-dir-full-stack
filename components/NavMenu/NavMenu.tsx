@@ -7,7 +7,7 @@ export const NavMenu = () => (
     <Link href='/'>
       <Image src='/logo.svg' alt='Logo' width={216} height={30} />
     </Link>
-    <ul>
+    <ul className={s.links}>
       <li>
         <Link href='/about'>About</Link>
       </li>
