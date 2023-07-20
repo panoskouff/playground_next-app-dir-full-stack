@@ -1,6 +1,7 @@
 import { NavMenu } from '@/components/NavMenu/NavMenu';
 import './globals.css';
 import type { Metadata } from 'next';
+import AuthProvider from '@/providers/AuthProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body>
-        <NavMenu />
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang='en'>
+        <body>
+          <NavMenu />
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }

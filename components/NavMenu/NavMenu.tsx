@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import s from './NavMenu.module.css';
+import AuthCheck from '@/helpers/AuthCheck';
+import { SignInButton, SignOutButton } from '../Buttons';
 
 export const NavMenu = () => (
   <nav className={s.nav}>
@@ -16,6 +18,15 @@ export const NavMenu = () => (
       </li>
       <li>
         <Link href='/users'>Users</Link>
+      </li>
+      <li>
+        <SignInButton />
+      </li>
+
+      <li>
+        <AuthCheck>
+          <SignOutButton />
+        </AuthCheck>
       </li>
     </ul>
   </nav>
